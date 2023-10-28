@@ -96,8 +96,8 @@ function Edit() {
                                     />
                                 </Form.Group>
                                 <Form.Group controlId="category">
-                                    <Form.Label>카테고리(복수 응답 가능)</Form.Label>
-                                    {['게임', '요리', '독서', '취미', '운동', '공부', '기타', '일상'].map((category) => (
+                                    <Form.Label>Categories</Form.Label>
+                                    {['JS','TS','CSS','SCSS','Bootstrap','Git','React','Express.js','Docker','MongoDB','OpenAPI','Etc'].map((category) => (
                                         <Form.Check
                                             key={category}
                                             type="checkbox"
@@ -109,11 +109,11 @@ function Edit() {
                                     ))}
                                 </Form.Group>
                                 <br />
-                                <Button variant="primary" onClick={handleEdit}>
-                                    등록
+                                <Button variant="outline-secondary" onClick={handleEdit}>
+                                    Post
                                 </Button>
-                                <Button className='ms-2' variant="danger" onClick={() => { navigate(-1) }}>
-                                    뒤로가기
+                                <Button className='ms-2' variant="outline-light" onClick={() => { navigate(-1) }}>
+                                    Cancel
                                 </Button>
                             </Form>
                         </Container>

@@ -51,7 +51,9 @@ function App() {
           {userInfo.email ?
             <>
               {userInfo.name}님 반갑습니다.
-              <Link to='/login'><Button onClick={handleLogout}>Sign out</Button></Link>
+              <br />
+              
+              <Link to='/login'><Button variant = 'outline-secondary' onClick={handleLogout}>Sign out</Button></Link>
             </>
             :
             <>

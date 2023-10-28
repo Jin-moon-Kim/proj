@@ -52,7 +52,7 @@ function Content() {
         <>
             {crntPost ? <div>
                 <Container className="mt-4">
-                    <h1>게시물 상세 페이지</h1>
+                    {/* <h1>게시물 상세 페이지</h1> */}
                     <Card className="mt-4">
                         <Card.Header>
                             <Row>
@@ -63,8 +63,8 @@ function Content() {
                                     <p className="text-muted text-right">글쓴이: {crntPost.author}</p>
                                     <p className="text-muted text-right">조회수: {crntPost.view}</p>
                                     <p className="text-muted text-right">카테고리: {crntPost.category.map((e) => { return <span key={e} className="badge bg-secondary ms-2">{e}</span> })}</p>
-                                    <Link to={`/edit/${crntPost.author}/${crntPost._id}`}><Button>수정</Button>{' '}</Link>
-                                    <Button variant="danger" onClick={() => { deletePost(crntPost._id) }}>삭제</Button>
+                                    <Link to={`/edit/${crntPost.author}/${crntPost._id}`}><Button variant='outline-secondary'>Edit</Button></Link>
+                                    <Button variant="outline-secondary" onClick={() => { deletePost(crntPost._id) }}>Delete</Button>
                                 </Col>
 
                             </Row>
@@ -76,7 +76,7 @@ function Content() {
                     </Card>
                 </Container>
                 <div className='text-center'>
-                    <Button className='ms-2' variant="danger" onClick={() => { navigate(-1) }}>
+                    <Button className='ms-2' variant="outline-secondary" onClick={() => { navigate(-1) }}>
                         뒤로가기
                     </Button>
                 </div>
